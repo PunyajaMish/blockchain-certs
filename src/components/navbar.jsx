@@ -8,7 +8,7 @@ class Navhead extends Component {
     return (
       <Navbar className="bar" bg="dark" variant="dark" expand="lg">
         <Navbar.Brand mb={0} href="#home">
-          DigitalBlock
+          InnovFin
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
