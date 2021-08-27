@@ -9,14 +9,18 @@ import Reg from "./components/reg";
 import Intro from "./components/intro";
 import certcontract from "./config.js";
 import Certificate from "./components/certificate";
-
+ 
 class App extends Component {
   state = {
     account: "",
     name: "",
     course: "",
     txh: "",
-    id: "",
+    id: "", //new
+    studentaddress:"", //new
+    colname:"", //new
+    coladdress:"", //new
+    dateissued:"", //new
     output: [],
     tofound: false
   };
@@ -44,8 +48,8 @@ class App extends Component {
   add = data => {
     //const certificates = new this.state.web3.eth.Contract(abi, address);
     //console.log(data.fname, data.course, data.email);
-    var name = data.fname + " " + data.lname;
-    certcontract.methods.addcert(name, data.course, data.email).send(
+    //var name = data.fname + " " + data.lname;
+    certcontract.methods.addcert(data.fname, data.lname, data.course, data.colname).send(
       {
         from: this.state.account,
         gas: 500000
@@ -55,15 +59,17 @@ class App extends Component {
         else {
           this.setState({ name: data.fname + " " + data.lname });
           this.setState({ course: data.course + " " + "course" });
+          this.setState({ studentaddress: data.studentaddress});
+          this.setState({id:data.id});
           this.setState({ txh: result });
           console.log(result);
-          certcontract.methods
+         /* certcontract.methods
             .getid()
             .call({ from: this.state.account }, (error, result) => {
-              this.setState({ id: result });
+              this.setState({ id: data.id });
               if (!error) console.log(result);
               else console.log(error);
-            });
+            });*/
           //certcontract.events.added({}, (error, ev) => {
           //to use event below 2 lines
           //let key = Object.keys(ev[1].returnValues)[1];
@@ -73,8 +79,8 @@ class App extends Component {
       }
     );
   };
-  get = data => {
-    //console.log(data.id);
+  /*get = data => {
+    console.log(data.id);
     certcontract.methods
       .getcert(data.id)
       .call({ from: this.state.account }, (error, result) => {
@@ -87,7 +93,8 @@ class App extends Component {
           console.log(this.state.output);
         } else alert("Certificate not found");
       });
-  };
+  };*/
+  
   render() {
     return (
       <div className="App">
@@ -116,6 +123,7 @@ class App extends Component {
                 course={this.state.course}
                 txh={this.state.txh}
                 id={this.state.id}
+                studentaddress={this.state.studentaddress}
               />
             )}
           />
