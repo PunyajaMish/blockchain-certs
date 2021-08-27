@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+ import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import b1 from "../b3.jpg";
 import CertFound from "./certfound";
@@ -61,7 +61,8 @@ class Getcert extends Component {
           >
             Verify the Certificate
           </h1>
-          <Form
+          
+         {/* <Form
             className="px-3 pt-4"
             onSubmit={this.getcertificate}
             style={{ background: "rgba(255,255,255,0.5)" }}
@@ -85,7 +86,7 @@ class Getcert extends Component {
             </Button>
           </Form>
           {this.props.yes ? <CertFound details={this.props.details} /> : null}
-
+         */}
           <hr
             className="mt-5 "
             style={{ color: "red", backgroundColor: "red", height: 5 }}
