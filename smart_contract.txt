@@ -10,7 +10,7 @@ contract cert{
         string fname;
         string lname;
         string course;
-        //string colname;
+        string colname;
     }
     
     mapping(address=>cert_details) certificates;
@@ -27,7 +27,7 @@ contract cert{
     
     event coll_added(string name);//event when college is added
     
-    event certadded(string fname,string lname,string course,string cname);
+    event certadded(string fname,string lname,string course,string colname);
     
     
     function addCollege(address coladd,string memory name) ownerOnly  public{
@@ -44,10 +44,10 @@ contract cert{
         return certificates[sender].fname;
     }
     
-    function addcert(string memory lname,string memory fname,string memory course) public{
+    function addcert(string memory fname,string memory lname,string memory course, string memory colname) public{
      if(checkcoll(msg.sender)){
-           certificates[msg.sender]=cert_details(fname,lname,course);
-          // emit certadded(fname,lname,course,colleges[msg.sender].colname);
+           certificates[msg.sender]=cert_details(fname,lname,course,colname);
+           emit certadded(fname,lname,course,colleges[msg.sender].colname);
      }
         
  }
