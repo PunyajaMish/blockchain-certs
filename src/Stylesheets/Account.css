@@ -1,0 +1,70 @@
+#login-container {
+    padding: 0em 7em;
+}
+
+#reg-img {
+    background: url("/loginBG.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    align-items: center;
+}
+
+#reg-img #register-container {
+    /* height: 95.6vh; */
+    /* position: absolute; */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.account button{
+    background-color: #004684;
+    border: none;
+}
+
+.account{
+    /* height: 100%;
+    width: 100%; */
+}
+
+.btn-reg{
+    /* height: 3em; */
+    width: 12em;
+    padding: .75em 0em !important;
+    font-size: 16pt !important;
+    font-weight: bold !important;
+    background-color: #004684 !important;
+    border: none !important;
+}
+
+.btn-reg:hover{
+    background-color: #0069d9!important;
+}
+
+.btn-login{
+    height: 3em;
+    width: 100%;
+    font-size: 16pt !important;
+    font-weight: bold !important;
+    margin: 1em 0em !important;
+}
+
+.form-check input{
+    filter: drop-shadow(2px 1px 1px rgb(168, 168, 168));
+}
+
+#email{
+    background-color: #F2F4F5;
+    border: none;
+    height: 3.5em;
+}
+
+#password{
+    background-color: #F2F4F5;
+    border: none;
+    height: 3.5em;
+}

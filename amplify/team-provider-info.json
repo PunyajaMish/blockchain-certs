@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-blockchaincerts-dev-90422-authRole",
+      "UnauthRoleArn": "arn:aws:iam::037803612443:role/amplify-blockchaincerts-dev-90422-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::037803612443:role/amplify-blockchaincerts-dev-90422-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-blockchaincerts-dev-90422-deployment",
+      "UnauthRoleName": "amplify-blockchaincerts-dev-90422-unauthRole",
+      "StackName": "amplify-blockchaincerts-dev-90422",
+      "StackId": "arn:aws:cloudformation:us-east-2:037803612443:stack/amplify-blockchaincerts-dev-90422/817f7360-61ae-11ec-86d5-060646491298",
+      "AmplifyAppId": "d3djgqa4pmd9ug"
+    },
+    "categories": {
+      "auth": {
+        "blockchaincerts50ee64e9": {}
+      }
+    }
+  }
+}

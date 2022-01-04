@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  font-family: Lato !important;
 }
 
 .App-header {
@@ -15,4 +17,129 @@
 
 .App-link {
   color: #61dafb;
+}
+
+/* 
+the following lines import the font for use
+something to note is that the Black is thicker than the Bold, this is probably how the font was designed
+*/
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Regular.ttf);
+  font-style: normal;
+}
+
+/* 
+Use 700 for bold
+Use 800 for extra bold
+*/
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Black.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./fonts/Lato-BlackItalic.ttf);
+  font-weight: 800;
+  font-style: italic;
+}
+
+
+.account {
+  /* background: url("./b3.jpg") no-repeat; */
+  /* background-size: cover; */
+  /* border: 1px solid black; */
+  height: 100vh;
+  width: 100%;
+  /* color: white; */
+}
+
+#cert-reg{
+  height: 205mm;
+  width: auto;
+  margin: 2em 0em;
+}
+
+#cert-tmp{
+  height: 205mm;
+  width: auto;
+  margin: 2em 0em;
+}
+
+.auth-input{
+  padding: 0em 1em;
+}
+
+.auth-input .form-label{
+  float: left;
+}
+
+.btn-form{
+  margin: .5em .5em;
+}
+
+.navbar-brand{
+  padding-bottom: 0em !important;
+}
+
+.account-form{
+  margin: 1.5em 0em;
+  background: rgba(116, 116, 116, 0.5)
+}
+
+.account-details{
+  margin: 1.5em 0em;
+  padding: 2em 0em;
+  background: rgba(116, 116, 116, 0.5);
+  width: 50% !important;
+}
+
+.account-details h1{
+  margin: 0em 0em .5em 0em;
+}
+
+.account-details hr{
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+#embed-cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* opacity: .25; */
+  /* background-color: red; */
+  height: 92%;
+}
+
+#certFull{
+  position: relative;
+}
+
+#brand-logo{
+  height: 2em;
 }

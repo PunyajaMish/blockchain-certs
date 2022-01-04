@@ -1,0 +1,24 @@
+.nav-item a {
+    color: black;
+    font-weight: normal;
+}
+
+#login-btn {
+    background-color: #004684;
+    border: none;
+    width: 8em;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.bar {
+    padding: 0.5em 5em !important;
+}
+
+.bar {
+    margin-bottom: 0 !important;
+}
+
+.bar {
+    font-weight: bold;
+}

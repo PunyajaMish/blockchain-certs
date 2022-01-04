@@ -1,0 +1,36 @@
+.home {
+    /* background: url("./b3.jpg") no-repeat; */
+    /* background-size: cover; */
+    /* border: 1px solid black; */
+    height: 80%;
+    max-width: 80%;
+    color: black;
+    margin: 3em 0em;
+    text-align: left;
+    padding: 0em 0em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.home h1{
+    color: #004684;
+    font-size: 48pt;
+    font-weight: bold;
+}
+
+.home p{
+    font-size: 24pt;
+}
+
+#access-btn{
+    background-color: #004684;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 1em;
+}
+
+/* #basic-navbar-nav{
+    text-align: justify !important;
+    width: 100%;
+} */

@@ -1,0 +1,14 @@
+.footer {
+    background-color: #004684;
+    color: white;
+    height: 10vh;
+}
+
+.footer .nav-item a {
+    color: white;
+    font-weight: normal;
+}
+
+.footer .nav {
+    padding: 2em 0em;
+}

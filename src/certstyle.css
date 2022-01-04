@@ -9,38 +9,96 @@
   width: 200vh;
   background: url("b3.jpg") no-repeat;
   background-size: cover;
+  min-height: 100vh;
 }
 #fname {
   font-size: 4em;
-  padding-top: 4em;
-  padding-left: 1em;
+  /* padding-top: 4em; */
+  /* padding-left: 1em; */
+  position: absolute;
+  top: 35%;
+  /* bottom: 9.5em; */
+  right: 0em;
+  left: 0.25em;
 }
 
 #course {
   font-size: 3em;
-  margin-top: 1em;
-  margin-left: 2em;
+  /* margin-top: 1em; */
+  /* margin-left: 2em; */
   font-weight: bold;
+  position: absolute;
+  top: 50%;
+  /* bottom: 11em; */
+  right: 0em;
+  left: 0.5em;
 }
 
 #sAdd {
-  font-size: 1.4em;
-  margin-top: 20.5em;
-  margin-left: 11.4em;
+  font-size: 12pt;
+  /* margin-top: 20.5em;
+  margin-left: 11.4em; */
+  position: relative;
+  bottom: 16em;
+  right: 0em;
+  left: 6.75em;
 }
 
 #txh {
-  font-size: 1.4em;
-  margin-top: 0.5em;
-  margin-left: 23.9em;
+  font-size: 11pt;
+  /* margin-top: 0.5em;
+  margin-left: 23.9em; */
+  position: relative;
+  bottom: 17.15em;
+  right: 0em;
+  left: 12.25em;
 }
 
 #id {
   font-size: 1.5em;
-  margin-top: -0.8em;
-  margin-left: -53em;
+  /* margin-top: -0.8em;
+  margin-left: -53em; */
+  position: relative;
+  bottom: 12em;
+  right: 0em;
+  left: -20em;
+  /* text-align: left; */
 }
 
 .btn {
   margin-top: 10px;
+}
+
+#certContainer{
+  padding: 2em;
+}
+
+#certContainer h1{
+  color: white;
+  padding: .5em 0em;
+}
+
+#cert{
+  height: 197mm;
+  width: "auto";
+  margin: 2em 0em;
+}
+
+@media (max-width:1200px){
+  #fname {
+    top: 30%;
+  }
+  #course {
+    top: 45%;
+  }
+}
+@media (max-width:992px){
+  #fname {
+    font-size: 3em;
+    top: 27%;
+  }
+  #course {
+    font-size: 2em;
+    top: 38%;
+  }
 }

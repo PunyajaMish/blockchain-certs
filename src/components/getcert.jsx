@@ -1,9 +1,17 @@
- import React, { Component } from "react";
+import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import b1 from "../b3.jpg";
 import CertFound from "./certfound";
+import web3 from "../web3";
 
 class Getcert extends Component {
+  getNetwork (){
+    web3.eth.net.getNetworkType().then(
+      response => (this.setState({
+        network: response
+      }))
+    )
+  }
   canBeSubmittedid() {
     const id = this.state.id;
     return id.length > 0;
@@ -26,14 +34,21 @@ class Getcert extends Component {
 
   gettransaction = event => {
     event.preventDefault();
-    const url = "https://ropsten.etherscan.io/tx/" + this.state.txh;
+    let url = ""
+    if (this.state.network === "kovan") {
+      console.log("kovan")
+      url = "https://kovan.etherscan.io/tx/" + this.state.txh;
+    } else {
+      url = "https://ropsten.etherscan.io/tx/" + this.state.txh;
+    }
     window.open(url);
     console.log(url);
   };
 
   state = {
     id: "",
-    txh: ""
+    txh: "",
+    network: "ropsten"
   };
   render() {
     const isEnabledid = this.canBeSubmittedid();
@@ -61,8 +76,8 @@ class Getcert extends Component {
           >
             Verify the Certificate
           </h1>
-          
-         {/* <Form
+
+          {/* <Form
             className="px-3 pt-4"
             onSubmit={this.getcertificate}
             style={{ background: "rgba(255,255,255,0.5)" }}
@@ -126,8 +141,24 @@ class Getcert extends Component {
               className="mt-2 mb-3"
               variant="primary"
               type="submit"
+              style={{ margin: "0em 1em" }}
+              onClick={() => {
+                this.setState({ network: "kovan" })
+              }}
             >
-              Verify
+              Verify on Kovan
+            </Button>
+            <Button
+              disabled={!isEnabledtxh}
+              className="mt-2 mb-3"
+              variant="primary"
+              type="submit"
+              style={{ margin: "0em 1em" }}
+              onClick={() => {
+                this.setState({ network: "ropsten" })
+              }}
+            >
+              Verify on Ropsten
             </Button>
           </Form>
         </div>
