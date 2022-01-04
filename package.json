@@ -1,6 +1,7 @@
 {
   "name": "project",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "aws-amplify": "^4.3.11",

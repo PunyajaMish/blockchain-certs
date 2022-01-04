@@ -10,7 +10,7 @@ function Home() {
                 <Col md={5}>
                     <h1>Blockchain Verified Certification</h1>
                     <p>Auto-Retrieve or Auto-Verify Your Innov-Edu Course Certificate on the Blockchain!</p>
-                    <Button id="access-btn">Access Certificate Now!</Button>
+                    <Button href="/view" id="access-btn">Access Certificate Now!</Button>
                 </Col>
                 <Col md={7}>
                     <Container>
